@@ -1,17 +1,63 @@
-<nz-layout>
-    <app-header></app-header>
-    <nz-content style="padding: 0 50px;">
-      <nz-breadcrumb style="margin: 16px 0;">
-        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
-      </nz-breadcrumb>
-      <div class="site-layout-content">
-        <h1>Welcome to Our Application!</h1>
-        <nz-card nzTitle="Introduction" nzBordered="false" style="width:300px;">
-          <p>This is the welcome page of our application. Enjoy exploring!</p>
-        </nz-card>
-        <nz-button nzType="primary" routerLink="/converse">Go to Converse Page</nz-button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converse AI</title>
+    <link rel="stylesheet" href="welcome-page.component.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Converse AI Logo" />
+          <!-- Update your logo path -->
+        </div>
+        <nav class="navigation">
+          <a href="/home" class="nav-link active">Home</a>
+          <a href="/converse" class="nav-link">Converse</a>
+        </nav>
+      </header>
+      <div class="animate-drop">
+        <main class="main-content">
+          <h1>Welcome to Converse AI!</h1>
+          <div class="card">
+            <h2>Introduction</h2>
+            <p>This is the welcome page of our application. Enjoy exploring!</p>
+          </div>
+        </main>
       </div>
-    </nz-content>
-    <nz-footer style="text-align: center;">Created by Rohan Parmar and Saurab Dhir for Gemini API Developer Competition </nz-footer>
-  </nz-layout>
-  
+
+      <div class="carousel">
+        <div class="carousel-card">
+          <h2>Card 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="carousel-card">
+          <h2>Card 2</h2>
+          <p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="carousel-card">
+          <h2>Card 3</h2>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi.
+          </p>
+        </div>
+      </div>
+
+      <div class="converse-button container">
+        <a href="converse" class="button">Start Conversing</a>
+      </div>
+
+      <footer class="footer">
+        <p>
+          Created by Rohan Parmar and Saurab Dhir for Gemini API Developer
+          Competition
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
