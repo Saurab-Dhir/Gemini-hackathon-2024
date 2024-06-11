@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const unitRelationSchema = new Schema({
+const audioStream = new Schema({
   audioName: String,
   audioDate: Date,
   AudioLength: String,

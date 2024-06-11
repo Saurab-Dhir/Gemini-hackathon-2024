@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const converseRoutes = require("./routes/converseRoutes");
+require("dotenv").config({ path: "./cred.env" });
 
 const test = {
   saurab: "abc",
