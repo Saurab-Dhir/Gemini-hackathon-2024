@@ -1,0 +1,170 @@
+/* Basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: white;
+  font-size: 16px;
+  margin: 0; /* Ensures there's no default margin */
+  padding: 0; /* Ensures there's no default padding */
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto; /* Center the container */
+  width: 100%; /* Ensures the container takes full width on smaller screens */
+}
+
+/* Full-width header and footer */
+.header,
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Keeps items spaced out */
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #1890ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #1890ff;
+}
+
+.main-content {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.card {
+  max-width: 600px; /* Or whatever maximum width you prefer */
+  margin: 20px auto; /* Centers the card horizontally */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  border-radius: 8px; /* Smoother border-radius percentage */
+  transition: 0.7s;
+}
+
+.card:hover {
+  transform: scale(1.1); /* Correctly scales the card on hover */
+  transition: 0.7s;
+}
+
+h1,
+h2 {
+  color: #1890ff;
+}
+
+.button {
+  display: inline-block;
+  background-color: #1890ff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.converse-button {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  justify-content: center;
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromBlack {
+  from {
+    background-color: transparent;
+    opacity: 0;
+  }
+  to {
+    background-color: #0c0c0c;
+    opacity: 1;
+  }
+}
+
+.animate-drop {
+  animation: dropIn 1s;
+}
+
+.header {
+  animation: fadeInFromBlack 1s ease-out forwards;
+  will-change: opacity;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  margin: auto;
+  justify-content: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.carousel-card {
+  flex: none;
+  width: 300px; /* Square cards */
+  height: 300px;
+  margin: 20px;
+  background-color: #141414;
+  color: white;
+  text-align: center;
+  scroll-snap-align: start;
+  border-radius: 8px; /* Optional, for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.carousel-card:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.carousel-card h2 {
+  margin-top: 20px;
+}
+
+.carousel-card p {
+  padding: 0 20px;
+}

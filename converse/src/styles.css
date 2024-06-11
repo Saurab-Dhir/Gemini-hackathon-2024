@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* Styling the scrollbar for Webkit browsers like Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 12px; /* Vertical scrollbar width */
+  height: 12px; /* Horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212; /* The part the scrollbar can scroll within */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1890ff; /* Dark blue color for the scrollbar itself */
+  border-radius: 10px;
+  border: 3px solid #121212; /* Creates a slight border within the scrollbar track */
+}
+
+/* Styling the scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* 'auto' or 'thin' */
+  scrollbar-color: #1890ff #121212; /* thumb and track */
+}
+
+/* Optional: hide the scrollbar when it's not being used */
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+  background: #1890ff; /* Adjust color when the window is inactive */
+}
