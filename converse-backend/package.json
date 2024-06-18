@@ -1,6 +1,7 @@
 {
   "name": "converse-backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google/generative-ai": "^0.12.0",
     "dotenv": "^16.4.5",
     "elevenlabs": "^0.6.0",
     "express": "^4.19.2",

@@ -5,7 +5,7 @@ const { createAudioStreamFromText } = require('../controllers/converseController
 // Route to handle specific text "This is James"
 router.get('/manualAudioStream', async (req, res) => {
     try {
-        const audioContent = await createAudioStreamFromText("This my waife, my name Borat!!");
+        const audioContent = await createAudioStreamFromText("Wagwan brudda, me munni in da capricciosa bundem, ya follow?");
 
         res.writeHead(200, {
             'Content-Type': 'audio/mpeg',
