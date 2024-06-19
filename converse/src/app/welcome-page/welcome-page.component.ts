@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InfiniteTypingComponent } from '../shared/infinite-typing/infinite-typing.component';
 
 @Component({
   selector: 'app-welcome-page',
