@@ -9,10 +9,12 @@
     </nav>
   </header>
   <main class="main">
-    <h2 class="main-title">Learn Languages with AI</h2>
+    <h2 class="main-title">Learn Languages with Gemini</h2>
     <p class="main-description"><app-infinite-typing></app-infinite-typing>
     </p>
-    <button class="main-button" (click)="onButtonClick()">Get Started</button>
+    <button class="main-button" (click)="onButtonClick()">
+      <img src="assets/microphone_icon.svg" alt="">
+    </button>
   </main>
   <section class="features">
     <div class="feature" *ngFor="let feature of features">
