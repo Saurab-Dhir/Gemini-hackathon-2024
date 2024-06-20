@@ -1,11 +1,9 @@
 const audioStream = require("../models/audioModel");
-// converseController.ts
 
 import { ElevenLabsClient } from "elevenlabs";
 import * as dotenv from "dotenv";
 
 dotenv.config({ path: "./cred.env" });
-
 
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 
@@ -25,7 +23,6 @@ export const createAudioStreamFromText = async (
     model_id: "eleven_turbo_v2",
     text,
   });
-
 
   const chunks: Buffer[] = [];
   for await (const chunk of audioStream) {

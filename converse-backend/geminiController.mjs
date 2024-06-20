@@ -21,7 +21,7 @@ async function chatWithGemini() {
     const chat = model.startChat({
         history: [],
         generationConfig: {
-            maxOutputTokens: 500
+            maxOutputTokens: 5000
         }
     });
 
@@ -44,31 +44,3 @@ async function chatWithGemini() {
 }
 
 chatWithGemini();
-
-async function generateText(prompt) {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
-
-    try {
-        const result = await model.generateContent(prompt);
-        // Check if candidates array exists and has content
-        if (result.response && result.response.candidates && result.response.candidates.length > 0) {
-            // Accessing the nested text in the 'parts' array of the first candidate
-            const text = result.response.candidates[0].content.parts.map(part => part.text).join(' ');
-            console.log('Input prompt:', prompt);
-            console.log('Generated text:', text);
-            return text;
-        } else {
-            console.log('No candidates found in the response.');
-            return 'No candidates found.';
-        }
-    } catch (error) {
-        console.error('Error generating text:', error);
-    }
-}
-
-async function testGenerateText() {
-    const prompt = "WHATS UP ITS BIGGIE CHEESE HERE TO SAY HELLO TO ALL MY FANS";
-    const text = await generateText(prompt);  // Ensures the text is fetched using the correct function and method
-}
-
-// testGenerateText();
