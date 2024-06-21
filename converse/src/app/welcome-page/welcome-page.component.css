@@ -1,0 +1,159 @@
+.container {
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  background: linear-gradient(rgba(2,0,36,1) 0%, rgb(95, 47, 150) 26%, rgb(60, 30, 95) 66%,  rgb(44, 21, 69) 86%);
+  overflow: hidden;
+}
+
+@keyframes ripple {
+  0%, 100% {
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+  }
+  50% {
+    background-size: 150% 150%;
+    background-position: 50% 50%;
+  }
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -1;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 0.5vw;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0.5vw;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.main {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.main-description {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+
+.main-button {
+  background: transparent;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px; /* Change border-radius to 50% to make the button a circle */
+  font-size: 18px;
+  cursor: pointer;
+  width: 5vw;
+  font-weight: bold;
+  transition: 0.3s;
+  min-width: 8vw;
+  padding: 35px;
+  border-radius: 100%;
+
+}
+
+
+.main-button:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 10px white;
+  border-radius: 100%;
+  padding: 35px;
+}
+
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+  
+}
+
+.feature {
+  width: 200px;
+  text-align: center;
+  
+}
+
+.icon {
+  margin-bottom: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
+
+}
+
+.feature-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.feature-description {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.feature-button {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.feature-button:hover {
+  background-color: #472370;
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0 0 5px #3B82F6;
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+  background-repeat: no-repeat;
+  animation: fillButton 0.5s forwards;
+}
+
+@keyframes fillButton {
+  0% {
+    background-size: 0% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+
+

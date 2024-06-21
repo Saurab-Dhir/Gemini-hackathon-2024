@@ -1,0 +1,29 @@
+<div class="container">
+  <header class="header">
+    <h1 class="logo">ConverseAI</h1>
+    <nav class="nav">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Courses</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <main class="main">
+    <h2 class="main-title">Learn Languages with Gemini</h2>
+    <p class="main-description"><app-infinite-typing></app-infinite-typing>
+    </p>
+    <button class="main-button" (click)="onButtonClick()">
+      <img src="assets/microphone_icon.svg" alt="">
+    </button>
+  </main>
+  <section class="features">
+    <div class="feature" *ngFor="let feature of features">
+      <div class="icon">
+        <img [src]="feature.icon" alt="{{ feature.title }} icon" width="64" height="64">
+      </div>
+      <h3 class="feature-title">{{ feature.title }}</h3>
+      <p class="feature-description">{{ feature.description }}</p>
+      <button class="feature-button" (click)="onButtonClick(feature.title)">Home</button>
+    </div>
+  </section>
+</div>
