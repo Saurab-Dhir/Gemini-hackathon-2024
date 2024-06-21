@@ -1,9 +1,9 @@
-<nz-header>
-    <div class="logo">
-        <img src="assets/logo.png" alt="Logo" />
-      </div>
-    <ul nz-menu nzMode="horizontal" nzTheme="dark">
-      <li nz-menu-item routerLink="/">Home</li>
-      <li nz-menu-item routerLink="/converse">Converse</li>
-    </ul>
-  </nz-header>
+<header class="flex justify-between items-center p-6">
+  <h1 class="text-3xl font-bold text-white">ConverseAI</h1>
+  <nav class="space-x-8">
+    <a routerLink="/home" class="text-white hover:text-gray-400">Home</a>
+    <a routerLink="/courses" class="text-white hover:text-gray-400">Courses</a>
+    <a routerLink="/about" class="text-white hover:text-gray-400">About</a>
+    <a routerLink="/contact" class="text-white hover:text-gray-400">Contact</a>
+  </nav>
+</header>

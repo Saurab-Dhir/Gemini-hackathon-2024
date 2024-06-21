@@ -1,170 +1,159 @@
-/* Basic styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #121212;
-  color: white;
-  font-size: 16px;
-  margin: 0; /* Ensures there's no default margin */
-  padding: 0; /* Ensures there's no default padding */
-}
-
 .container {
-  max-width: 100%;
-  margin: 0 auto; /* Center the container */
-  width: 100%; /* Ensures the container takes full width on smaller screens */
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  background: linear-gradient(rgba(2,0,36,1) 0%, rgb(95, 47, 150) 26%, rgb(60, 30, 95) 66%,  rgb(44, 21, 69) 86%);
+  overflow: hidden;
 }
 
-/* Full-width header and footer */
-.header,
-.footer {
-  width: 100%;
+@keyframes ripple {
+  0%, 100% {
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+  }
+  50% {
+    background-size: 150% 150%;
+    background-position: 50% 50%;
+  }
+
+}
+
+.header {
   display: flex;
-  justify-content: space-between; /* Keeps items spaced out */
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  z-index: -1;
 }
 
-.logo img {
-  height: 50px;
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 0.5vw;
 }
 
-.navigation {
+.nav {
   display: flex;
   gap: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0.5vw;
 }
 
 .nav-link {
-  color: #1890ff;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.nav-link.active {
-  border-bottom: 2px solid #1890ff;
+.nav-link:hover {
+  color: gray;
 }
 
-.main-content {
+.main {
   text-align: center;
   padding: 100px 20px;
 }
 
-.card {
-  max-width: 600px; /* Or whatever maximum width you prefer */
-  margin: 20px auto; /* Centers the card horizontally */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-  border-radius: 8px; /* Smoother border-radius percentage */
-  transition: 0.7s;
-}
-
-.card:hover {
-  transform: scale(1.1); /* Correctly scales the card on hover */
-  transition: 0.7s;
-}
-
-h1,
-h2 {
-  color: #1890ff;
-}
-
-.button {
-  display: inline-block;
-  background-color: #1890ff;
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
   color: white;
+}
+
+.main-description {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+
+.main-button {
+  background: transparent;
   padding: 10px 20px;
-  text-decoration: none;
-  margin-top: 20px;
-  border-radius: 5px;
+  border: none;
+  border-radius: 30px; /* Change border-radius to 50% to make the button a circle */
+  font-size: 18px;
+  cursor: pointer;
+  width: 5vw;
+  font-weight: bold;
+  transition: 0.3s;
+  min-width: 8vw;
+  padding: 35px;
+  border-radius: 100%;
+
 }
 
-.converse-button {
-  justify-content: center;
-  text-align: center;
-  width: 100%;
+
+.main-button:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 10px white;
+  border-radius: 100%;
+  padding: 35px;
 }
 
-.footer {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  justify-content: center;
-}
 
-@keyframes dropIn {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInFromBlack {
-  from {
-    background-color: transparent;
-    opacity: 0;
-  }
-  to {
-    background-color: #0c0c0c;
-    opacity: 1;
-  }
-}
-
-.animate-drop {
-  animation: dropIn 1s;
-}
-
-.header {
-  animation: fadeInFromBlack 1s ease-out forwards;
-  will-change: opacity;
-}
-
-.carousel {
+.features {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  margin: auto;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+  
 }
 
-.carousel::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-}
-
-.carousel-card {
-  flex: none;
-  width: 300px; /* Square cards */
-  height: 300px;
-  margin: 20px;
-  background-color: #141414;
-  color: white;
+.feature {
+  width: 200px;
   text-align: center;
-  scroll-snap-align: start;
-  border-radius: 8px; /* Optional, for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
+  
 }
 
-.carousel-card:hover {
-  scale: 1.1;
-  transition: 0.5s;
+.icon {
+  margin-bottom: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(100%) contrast(100%);
+
 }
 
-.carousel-card h2 {
-  margin-top: 20px;
+.feature-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
 }
 
-.carousel-card p {
-  padding: 0 20px;
+.feature-description {
+  color: gray;
+  margin-bottom: 20px;
 }
+
+.feature-button {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.feature-button:hover {
+  background-color: #472370;
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0 0 5px #3B82F6;
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+  background-repeat: no-repeat;
+  animation: fillButton 0.5s forwards;
+}
+
+@keyframes fillButton {
+  0% {
+    background-size: 0% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+
+

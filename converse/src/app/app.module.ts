@@ -15,6 +15,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ConversePageComponent } from './converse-page/converse-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { InfiniteTypingComponent } from './shared/infinite-typing/infinite-typing.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { HeaderComponent } from './shared/header/header.component';
     WelcomePageComponent,
     ConversePageComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    InfiniteTypingComponent,
+    
   ],
   imports: [
     BrowserModule,
