@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { InfiniteTypingComponent } from '../shared/infinite-typing/infinite-typing.component';
 
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
-  styleUrl: './welcome-page.component.css',
+  styleUrls: ['./welcome-page.component.css'],
 })
-
 export class WelcomePageComponent {
   features = [
     {
@@ -31,11 +29,21 @@ export class WelcomePageComponent {
     }
   ];
 
+  animate = false;
+
   onButtonClick(featureTitle?: string) {
     if (featureTitle) {
       alert(`Button clicked: ${featureTitle}`);
     } else {
-      alert('Get Started button clicked!');
+      this.animate = true;
+      setTimeout(() => {
+        // Perform further actions if needed after the animation
+      }, 1000); // Adjust the timeout duration based on the animation duration
     }
+  }
+
+  onHomeClick(event: Event) {
+    event.preventDefault(); // Prevent default link behavior
+    this.animate = false;
   }
 }
