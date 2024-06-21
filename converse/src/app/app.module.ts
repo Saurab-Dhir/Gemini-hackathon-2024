@@ -8,7 +8,6 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzCardModule } from 'ng-zorro-antd/card';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
@@ -16,6 +15,7 @@ import { ConversePageComponent } from './converse-page/converse-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { InfiniteTypingComponent } from './shared/infinite-typing/infinite-typing.component';
+import { ConverseService } from './services/converseService/converse.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { InfiniteTypingComponent } from './shared/infinite-typing/infinite-typin
     NzCardModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ConverseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
