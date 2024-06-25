@@ -11,7 +11,6 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { ConversePageComponent } from './converse-page/converse-page.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { InfiniteTypingComponent } from './shared/infinite-typing/infinite-typing.component';
@@ -21,7 +20,6 @@ import { ConverseService } from './services/converseService/converse.service';
   declarations: [
     AppComponent,
     WelcomePageComponent,
-    ConversePageComponent,
     FooterComponent,
     HeaderComponent,
     InfiniteTypingComponent,
