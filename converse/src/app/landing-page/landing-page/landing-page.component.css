@@ -1,0 +1,300 @@
+/* landing-page.component.css */
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #151515;
+  }
+  
+  .sidebar {
+    background-color: #1e1e1e;
+    width: 250px;
+    padding: 20px;
+  }
+
+  .user-settings {
+    margin-left: auto; /* Push the element to the right */
+  }
+
+h1, h2, p {
+    color: #FFFFFF; /* Bright white for better readability */
+    text-align: center; /* Center-align headings and text */
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.25rem; /* Adjust font size as necessary */
+}
+
+p {
+    font-size: 0.9rem;
+    color: #CCCCCC; /* Lighter grey for less critical text */
+}
+
+/* Styles for the header */
+.app-header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+  margin: 0;
+}
+
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-menu img {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  border-radius: 20px; /* Circular icon */
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 150px; /* Adjust width as needed */
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu li i {
+  margin-right: 10px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* Increased specificity to ensure styles are applied */
+.saved-configurations ul {
+  list-style-type: none; /* This should remove bullets */
+  padding-left: 0; /* Sometimes necessary to remove default padding */
+}
+
+.saved-configurations li {
+  background-image: url('/assets/user_icon.png');
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  line-height: 20px;
+  margin: 5px 0; /* Adjust for better vertical spacing */
+}
+
+
+/* Additional styling to refine appearance */
+.saved-configurations {
+    margin-left: 20px; /* Provide some space from the sidebar edge */
+}
+
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #1D1D1D;
+    padding: 20px;
+    height: 100%;
+  }
+
+  .authentication-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .saved-configurations h2{
+    color: wheat;
+    font-size: large;
+  }
+
+  .welcome-section{
+    color:white;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .welcome-section h2 {
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+  }
+
+  .welcome-section p {
+    color: #5B697D;
+    font-weight: 500;
+  }
+  .saved-configurations, h2, h3 {
+    margin-top: 0;
+  }
+  
+  .saved-configurations ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .saved-configurations li {
+    margin-bottom: 10px;
+  }
+  
+  .config-icon {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .start-conversation, .configure-chat {
+    margin-top: 10px;
+  }
+  
+  .gemini-logo {
+    font-size: 32px;  
+    background: linear-gradient(to right, #ff7f7f, #ffb199, #ff9ed2, #b199ff, #7f7fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback: hide text for browsers that do not support this style */
+  }
+  
+
+  /* Add these styles in your component's CSS file */
+  .login-container {
+    background-color: #1F1F1F; /* Dark grey background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px; /* Adjust width as needed */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* subtle shadow */
+    color: white;
+    text-align: center;
+    margin: auto;
+  }
+
+.login-container h2 {
+  font-weight: bold;
+  margin-top: 0;
+  color: #FFFFFF; /* White color text */
+}
+
+.login-container p {
+  color: #4A5563; /* Lighter grey for text */
+  font-size: 14px;
+}
+
+.google-sign-in img {
+  margin-right: 10px; /* Space between icon and text */
+  width: 20px; /* Adjust size as needed */
+}
+
+.sign-in-text {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+}
+
+
+.chatbot-container {
+  margin-top: 200px;
+  background-color: #1F1F1F; /* Dark grey background */
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px; /* Adjust width as needed */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* subtle shadow */
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.chatbot-container h2{
+  color: white;
+  font-weight: bold;
+}
+
+.chatbot-settings {
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  gap: 20px;
+}
+
+
+.start-conversation-button img {
+  margin-right: 10px;
+  width: 20px;
+}
+
+
+
+.configure-chatbot-button img {
+  margin-right: 10px;
+  width: 20px;
+}
+
+
+.google-sign-in, .start-conversation-button, .configure-chatbot-button {
+    background-color: #FFFFFF; /* Consistent background */
+    color: black; /* Text color */
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded corners, less pronounced than 100px */
+    width: 100%; /* Full-width button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.google-sign-in:hover, .start-conversation-button:hover, .configure-chatbot-button:hover {
+    background-color: #E0E0E0; /* Light grey for hover state */
+}

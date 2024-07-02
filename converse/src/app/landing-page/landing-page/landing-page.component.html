@@ -1,0 +1,70 @@
+<!-- Place this in your main layout, e.g., at the top of landing-page.component.html -->
+<header class="app-header">
+    <div class="header-content">
+        <h1>Gemini</h1> <!-- Logo or main title of the app -->
+        <div class="user-menu">
+            <img src="path_to_user_icon.png" alt="User" id="userMenuButton" (click)="toggleUserMenu()">
+            <div class="dropdown-menu" *ngIf="isUserMenuOpen">
+                <ul>
+                    <li><i class="fa fa-user"></i> Profile</li>
+                    <li><i class="fa fa-cog"></i> Settings</li>
+                    <li><i class="fa fa-sign-out"></i> Logout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- landing-page.component.html -->
+<div class="container">
+    <aside class="sidebar">
+        <h1 class="gemini-logo">Gemini</h1>
+        <div class="saved-configurations">
+            <h2>Saved Configurations</h2>
+            <ul>
+                <li>Michael (English)</li>
+                <li>Isabella (Spanish)</li>
+                <li>Anton (French)</li>
+                <li>Lucy (Mandarin)</li>
+            </ul>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+      <section class="welcome-section">
+        <h2>Welcome to our Platform</h2>
+        <p>Explore our advanced features and personalized services.</p>
+      </section>
+      <section class="authentication-section">
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <p>Sign in with your Google account to access your account.</p>
+            <button class="google-sign-in" (click)="signInWithGoogle()" style="border-radius: 100px;">
+                <div class="sign-in-text">
+                    <img src="assets/chrome-logo.png" alt="Google sign-in"> <!-- You will need a Google icon image here -->
+                    Sign in with Google
+                </div>
+            </button>
+        </div>
+
+        <div class="chatbot-container">
+            <h2>Chatbot</h2>
+            <p>Engage with our intelligent chatbot for assistance.</p>
+            <div class="chatbot-settings" (click)="signInWithGoogle()" style="border-radius: 100px;">
+                <button class="start-conversation-button">
+                    <img src="assets/microphone_icon.svg" alt="Google sign-in"> <!-- You will need a Google icon image here -->
+                    Start Conversation
+                </button>
+                
+                <button class="configure-chatbot-button">
+                    <img src="assets/settings_icon.png" alt="Google sign-in"> <!-- You will need a Google icon image here -->
+                    Configure
+                </button>
+            </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+  
